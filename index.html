@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Home</title>
+</head>
+<body>
+    <a class="skip" href="#main">Skip to Main Content</a>
+    <header>
+        <nav class="nav_list">
+            <ul>
+                <li><a href = "index.html" class="current_page">Home</a></li>
+                <li><a href = "pets.html">Pets</a></li>
+                <li><a href = "recipes.html">Recipes</a></li>
+                <li><a href = "travel.html">Travel</a></li>
+            </ul>
+        </nav>
+        <h1>Home</h1>
+    </header>
+    <main id="main">
+        <div class="index-top-content">
+            <div>
+                <p class="description">Welcome to SI 539 Week 2, your go-to destination for all things pets, recipes, and travel! Explore a world of captivating content where we cater to your love for furry companions, culinary delights, and globetrotting adventures. </p>
+            </div>
+
+            <div class="extra_space">
+                <p class="description">Here's some content for this content section.</p>
+                <iframe id="iframe" width="370" height="265" src="https://www.youtube.com/embed/X8C0N4mKSiw" aria-label="YouTube video titled 'Epic vacuum harmonica'">
+                </iframe>
+                <p class="description">The above iframe is working, Youtube just doesn't let non-public domains play their videos.</p>
+            </div>
+        </div>
+            <!-- Jackie Wolf -->
+        <div class="index-bottom-content">
+            <div>
+                <h2>Here's an h2 for this first section</h2>
+                <form>
+                    <label for="text-input">Enter text here to change the paragraph below</label>
+                    <input type="text" id="text-input" name="text input" placeholder="Enter text here to change the paragraph below">
+                    <input type="button" id="button" value="Update section below">
+                </form>
+                <p class="description" id="rewrite">Here's a paragraph for this section.</p>
+            </div>
+            <div>
+                <h2>Here's an h2 for a second section</h2>
+                <p class="description">Here's a paragraph for this second section.</p>
+            </div>
+            <div>
+                <h2>Here's an h2 for the third section</h2>
+                <p class="description">A complementary paragraph for the third.</p>
+            </div>
+            <div>
+                <h2>This is an h2 for the final section</h2>
+                <p class="description">Paragraph for the last section.</p>
+            </div>
+        </div>
+    </main>
+    <script>
+        let text_input = document.getElementById('text-input')
+        let rewritten_p = document.getElementById('rewrite')
+        let button = document.getElementById('button')
+        button.onclick = function update_text() {
+            rewritten_p.textContent = text_input.value;
+            text_input.value = '';
+        };
+    </script>
+</body>
+
+</html>
